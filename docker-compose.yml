@@ -6,6 +6,8 @@ services:
      - "80:80"
     volumes:
      - ./nginx_content:/usr/share/nginx/html
+     
+     
   jenkins:
     image: jenkins/jenkins:lts
     ports:
