@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    image: nginx:latest
+    ports:
+     - "80:80"
+    volumes:
+     - ./nginx_content:/usr/share/nginx/html
+  jenkins:
+    image: jenkins:lts
+    ports:
+     - "8080:8080"
+     - "5000:5000"
+    volumes: 
+     - ./jenkinsdata:/var/jenkins_home
